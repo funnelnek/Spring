@@ -19,7 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 public class Quiz {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;    
 
     @ManyToOne

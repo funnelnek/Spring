@@ -2,6 +2,7 @@ package com.funnelnek.spring.controllers;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +15,13 @@ import com.funnelnek.spring.repositories.QuizRepository;
 @RestController
 @RequestMapping("api/quizzes")
 public class QuizController {
+    @Autowired
     private QuizRepository quizzes;
 
     
 
-    public QuizController(QuizRepository quizzes) {
-        this.quizzes = quizzes;
+    public QuizController() {
+        
     }
 
 

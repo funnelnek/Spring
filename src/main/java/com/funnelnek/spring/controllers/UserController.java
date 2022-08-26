@@ -21,7 +21,7 @@ public class UserController {
     
 
     public UserController(UserRepository users) {
-        this.users = users;
+        
     }
 
     @GetMapping("")
