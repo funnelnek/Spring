@@ -1,5 +1,7 @@
 package com.funnelnek.spring.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.funnelnek.spring.entities.Calendar;
@@ -17,5 +19,9 @@ public class CalendarService {
 
     public Iterable<Calendar> findByPriceGreaterThan50() {        
         return calendars.findByPriceGreaterThan(50);
+    }
+
+    public Optional<Calendar> findById(Integer id) {
+        return calendars.findById(id);
     }
 }

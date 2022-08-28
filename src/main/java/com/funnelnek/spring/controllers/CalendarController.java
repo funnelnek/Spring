@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +29,10 @@ public class CalendarController {
     @GetMapping(value = "", params = "price[gte]=50")
     public Iterable<Calendar> findByPriceGreaterThan50() {
         return service.findByPriceGreaterThan50();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Calendar> findById(@PathVariable Integer id) {
+        return service.findById(id);
     }
 }
