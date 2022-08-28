@@ -36,7 +36,7 @@ public class Quiz {
     @ManyToMany()
     private Collection<Question> questions;
     private String title;
-
+    private String description;
 
     public Quiz() {}
 
@@ -74,5 +74,13 @@ public class Quiz {
 
     public void setQuestions(Collection<Question> questions) {
         this.questions = questions;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

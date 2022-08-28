@@ -19,7 +19,7 @@ public class Calendar {
     private String title;
 
     @Column(precision = 10, scale = 2)
-    private BigDecimal price;
+    private double price;
 
     public Calendar() {
 
@@ -37,11 +37,11 @@ public class Calendar {
         this.title = title;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }    
 }
